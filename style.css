@@ -145,5 +145,9 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .logo img {
+  height: 60px;  /* adjust this number */
+  width: auto;   /* keeps proportions correct */
+}
 }
 
