@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wagner Home Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Wagner Home Services</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#booking">Book a Service</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h2>Your Home, Our Expertise</h2>
+      <p>Professional home services you can trust — on your schedule.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <h3>Repairs</h3>
+        <p>Expert home repairs and maintenance.</p>
+      </div>
+      <div class="service-item">
+        <h3>Installations</h3>
+        <p>From fixtures to appliances, we install it all.</p>
+      </div>
+      <div class="service-item">
+        <h3>Renovations</h3>
+        <p>Upgrade and improve your living space.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking-section container">
+    <h2>Book a Service</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="booking-form">
+      <label for="appointment">Choose Appointment:</label>
+      <select name="appointment" id="appointment" required>
+        <option value="">Select a Time Slot</option>
+        <!-- Dates auto-filled by script.js -->
+      </select>
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="address" placeholder="Service Address" required>
+      <textarea name="job_description" placeholder="Describe the job" required></textarea>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section container">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:jwagner@whomeservices.net">jwagner@whomeservices.net</a></p>
+    <p>Phone: <a href="tel:7203555522">720-355-5522</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Wagner Home Services. All rights reserved.</p>
+    <p>Email: <a href="mailto:jwagner@whomeservices.net">jwagner@whomeservices.net</a> | 
+       Phone: <a href="tel:7203555522">720-355-5522</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
