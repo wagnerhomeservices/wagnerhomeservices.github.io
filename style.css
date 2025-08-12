@@ -22,6 +22,11 @@ body {
   padding: 1rem 0;
 }
 
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
 .logo {
   margin: 0;
   font-size: 1.8rem;
