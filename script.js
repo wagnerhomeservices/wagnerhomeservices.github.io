@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const appointmentSelect = document.getElementById("appointment");
+  if (!appointmentSelect) return;
 
-  // Clear existing options except the first "Select a Time Slot"
   appointmentSelect.innerHTML = '<option value="">Select a Time Slot</option>';
 
   const today = new Date();
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Find Monday of the current week
   const monday = new Date(today);
   const day = monday.getDay();
-  const diff = (day === 0 ? -6 : 1) - day; // If Sunday, adjust to previous Monday
+  const diff = (day === 0 ? -6 : 1) - day;
   monday.setDate(monday.getDate() + diff);
 
   const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
