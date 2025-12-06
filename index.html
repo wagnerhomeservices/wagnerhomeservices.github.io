@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wagner Home Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -11,14 +11,16 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <h1 class="logo">
-        <img src="logo.png" alt="Wagner Home Services Logo">
+        <img src="images/logo.png" alt="Wagner Home Services logo">
       </h1>
+
       <nav>
         <ul class="nav-links">
           <li><a href="#services">Services</a></li>
           <li><a href="#booking">Book a Service</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -28,7 +30,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <h2>Your Home, Our Expertise</h2>
+      <h2>Reliable Home Services You Can Trust</h2>
       <p>Professional home services you can trust — on your schedule.</p>
     </div>
   </section>
@@ -36,27 +38,50 @@
   <!-- SERVICES -->
   <section id="services" class="services-section container">
     <h2>Our Services</h2>
+
     <div class="services-grid">
-      <div class="service-item">
-        <h3>Repairs</h3>
-        <p>Expert home repairs and maintenance.</p>
+      <div class="service-card">
+        <h3>Junk Removal</h3>
+        <p>Fast cleanouts, appliance & furniture haul-away.</p>
       </div>
-      <div class="service-item">
-        <h3>Installations</h3>
-        <p>From fixtures to faucets, we install it all.</p>
+
+      <div class="service-card">
+        <h3>Tree Trimming</h3>
+        <p>Professional trimming to keep trees healthy and safe.</p>
       </div>
-      <div class="service-item">
-        <h3>Renovations</h3>
-        <p>Upgrade and improve your living space.</p>
+
+      <div class="service-card">
+        <h3>Furniture Moving</h3>
+        <p>Careful and reliable moving of furniture within or between locations.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Furniture Assembly</h3>
+        <p>Quick and accurate assembly of beds, desks, dressers, and more.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>TV Mounting</h3>
+        <p>Secure TV mounting with neat cable management.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Holiday Lighting Installation</h3>
+        <p>Beautiful and safe lighting setups for seasonal displays.</p>
       </div>
     </div>
+  </section>
+
+  <!-- FLYER (placed below services) -->
+  <section class="flyer container">
+    <img src="images/14712 (1).png" alt="Wagner services flyer">
   </section>
 
   <!-- BOOKING -->
   <section id="booking" class="booking-section container">
     <h2>Book a Service</h2>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="booking-form">
-      <label for="appointment">Choose Appointment:</label>
+      <label for="appointment" class="sr-only">Choose Appointment</label>
       <select name="appointment" id="appointment" required>
         <option value="">Select a Time Slot</option>
         <!-- Dates auto-filled by script.js -->
@@ -71,15 +96,33 @@
       <button type="submit">Submit Booking</button>
     </form>
   </section>
-<!-- REVIEWS -->
-<section class="reviews-section container">
-  <h2>Customer Reviews</h2>
-  <div class="reviews-wrapper">
-    <div class="review">"Utilized Jake’s services to mount a TV and put together a bookshelf. He was responsive, on time, personable, easy to work with and FAST! Will definitely be using him again in the future. Thanks again, Jake!" - San T.</div>
-    <div class="review">"Super amazing work & he was such a pleasure to chat with!" – Bella G.</div>
-    <div class="review">"Was a big help with a project in my office. I would rehire him!" – Karl W.</div>
-  </div>
-</section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews-section container">
+    <h2>Customer Reviews</h2>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <img src="images/michel.png" alt="Review by Michele S">
+      </div>
+      <div class="review-card">
+        <img src="images/sandy.png" alt="Review by Sandy K">
+      </div>
+      <div class="review-card">
+        <img src="images/Caitlyn.png" alt="Review by Caitlynn G">
+      </div>
+      <div class="review-card">
+        <img src="images/Ashley.png" alt="Review by Ashley V">
+      </div>
+      <div class="review-card">
+        <img src="images/jaimee.png" alt="Review by Jaimee C">
+      </div>
+
+      <!-- 6th slot left intentionally empty for clean grid -->
+      <div class="review-card empty-slot" aria-hidden="true"></div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="contact-section container">
     <h2>Contact Us</h2>
@@ -89,11 +132,13 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2025 Wagner Home Services. All rights reserved.</p>
-    <p>Email: <a href="mailto:jwagner@whomeservices.net">jwagner@whomeservices.net</a> | 
-       Phone: <a href="tel:7203555522">720-355-5522</a></p>
+    <div class="container">
+      <p>&copy; 2025 Wagner Home Services. All rights reserved.</p>
+      <p>Email: <a href="mailto:jwagner@whomeservices.net">jwagner@whomeservices.net</a> | Phone: <a href="tel:7203555522">720-355-5522</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
