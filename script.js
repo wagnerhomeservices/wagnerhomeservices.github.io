@@ -1,6 +1,6 @@
 const APP_CONFIG = {
   // Deploy google-apps-script.gs as a Web App, then paste the /exec URL here.
-  appsScriptUrl: "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxoa7rR5eTaGaBdCtv2uY08U_tue3S-BN4TzLEA35x8HV3GfM5SzehxHl7IPCwUGfuR8g/exec",
   analyticsId: "G-WEZ9VVS4D8"
 };
 
