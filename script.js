@@ -1,6 +1,6 @@
 const APP_CONFIG = {
   // Deploy google-apps-script.gs as a Web App, then paste the /exec URL here.
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxoa7rR5eTaGaBdCtv2uY08U_tue3S-BN4TzLEA35x8HV3GfM5SzehxHl7IPCwUGfuR8g/exec",
+  appsScriptUrl: "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL",
   analyticsId: "G-WEZ9VVS4D8"
 };
 
@@ -48,7 +48,7 @@ function updateEstimate(){
 }
 function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n)}
 
-function setupServiceDate(){const input=document.getElementById('service-date');if(!input)return;const min=new Date('2026-08-10T00:00:00');const today=new Date();const d=today>min?today:min;input.min=d.toISOString().split('T')[0];input.addEventListener('change',()=>{const day=new Date(input.value+'T12:00:00').getDay();if(day===4){input.setCustomValidity('Thursday is closed. Please choose another day.')}else{input.setCustomValidity('')}})}
+function setupServiceDate(){const input=document.getElementById('service-date');if(!input)return;const today=new Date();today.setHours(0,0,0,0);input.min=today.toISOString().split('T')[0];input.addEventListener('change',()=>{const day=new Date(input.value+'T12:00:00').getDay();if(day===4){input.setCustomValidity('Thursday is closed. Please choose another day.')}else{input.setCustomValidity('')}})}
 
 function setupReviewCarousel(){
   const carousel=document.getElementById('review-carousel');if(!carousel)return;
