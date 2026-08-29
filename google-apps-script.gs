@@ -5,7 +5,7 @@ function doPost(e) {
   const p = e.parameter || {};
   const sheet = getSheet_();
   sheet.appendRow([
-    new Date(), p.name || '', p.phone || '', p.email || '', p.service || '',
+    new Date(), p.first-name || '', p.last-name || '', p.phone || '', p.email || '', p.service || '',
     p.preferredDate || '', p.preferredTime || '', p.address || '',
     p.photoLink || '', p.description || '', p.page || '', p.referrer || ''
   ]);
@@ -18,7 +18,7 @@ function getSheet_() {
   let sheet = ss.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);
-    sheet.appendRow(['Submitted','Name','Phone','Email','Service','Preferred Date','Preferred Time','Address','Photo Link','Description','Page','Referrer']);
+    sheet.appendRow(['Submitted','First Name','Last Name''Phone','Email','Service','Preferred Date','Preferred Time','Address','Photo Link','Description','Page','Referrer']);
   }
   return sheet;
 }
