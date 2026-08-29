@@ -18,7 +18,7 @@ function getSheet_() {
   let sheet = ss.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);
-    sheet.appendRow(['Submitted','First Name','Last Name''Phone','Email','Service','Preferred Date','Preferred Time','Address','Photo Link','Description','Page','Referrer']);
+    sheet.appendRow(['Submitted','First Name','Last Name','Phone','Email','Service','Preferred Date','Preferred Time','Address','Photo Link','Description','Page','Referrer']);
   }
   return sheet;
 }
