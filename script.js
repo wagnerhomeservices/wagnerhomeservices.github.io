@@ -15,7 +15,7 @@ function setupMenu(){
   nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 }
 function setupFilters(){document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.project-card').forEach(card=>card.classList.toggle('hidden',f!=='all'&&card.dataset.category!==f));}));}
-function setupServiceDate(){const input=document.getElementById('service-date');if(!input)return;const today=new Date();today.setHours(0,0,0,0);input.min=today.toISOString().split('T')[0];input.addEventListener('change',()=>{const day=new Date(input.value+'T12:00:00').getDay();input.setCustomValidity(day===4?'Thursday is closed. Please choose another day.':'');});}
+function setupServiceDate(){const input=document.getElementById('service-date');if(!input)return;const today=new Date();today.setHours(0,0,0,0);input.min=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;input.addEventListener('change',()=>{const day=new Date(input.value+'T12:00:00').getDay();input.setCustomValidity(day===4||day===5?'Thursday and Friday are closed. Please choose another day.':'');});}
 function setupReviewCarousel(){
   const carousel=document.getElementById('review-carousel');if(!carousel)return;
   const track=carousel.querySelector('.review-track'),slides=[...carousel.querySelectorAll('.review-slide')],dots=carousel.querySelector('.review-dots'),counter=carousel.querySelector('.review-counter');let index=0,timer,touchStart=0;
